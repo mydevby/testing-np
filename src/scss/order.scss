@@ -1,0 +1,79 @@
+.order {
+    background-color: $gray-dark;
+    @include bgr2x("@img/order", "png");
+
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 120px 15px 150px;
+
+        @media (max-width: 1200px) {
+            padding: 100px 15px 120px;
+        }
+    
+        @media (max-width: 991px) {
+            padding: 70px 15px 90px;
+        }
+    
+        @media (max-width: 767px) {
+            padding: 50px 15px 70px;
+        }
+    }
+
+    &__title {
+        max-width: 800px;
+        margin: 0 auto 30px;
+        text-align: center;
+        color: $white;
+        font-weight: 800;
+        font-size: 36px;
+        text-transform: uppercase;
+
+        &--blue {
+            color: $blue;
+        }
+
+        @media (max-width: 991px) {
+			font-size: 30px;
+            margin-bottom: 20px;
+        }
+    
+        @media (max-width: 767px) {
+			font-size: 20px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__text {
+        max-width: 800px;
+        margin: 0 auto 80px;
+        text-align: center;
+		color: $gray-light;
+    	font-size: 18px;
+
+		&--blue {
+			color: $blue;
+		}
+
+        @media (max-width: 991px) {
+            margin-bottom: 40px;
+        }
+    
+        @media (max-width: 767px) {
+			font-size: 16px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__steps {
+        margin-bottom: 80px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 50px;
+        }
+    
+        @media (max-width: 767px) {
+            margin-bottom: 40px;
+        }
+    }
+}

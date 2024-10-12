@@ -1,0 +1,39 @@
+/*rem-calc*/
+@use "sass:math";
+$rem-base: 16px;
+
+@function strip-unit($num) {
+  @return math.div($num , ($num * 0 + 1)); 
+}
+
+@function convert-to-rem($value, $base-value: $rem-base)  {
+  $value: calc(strip-unit($value) / strip-unit($base-value)) * 1rem;
+  @if ($value == 0rem) { $value: 0; }
+  @return $value;
+}
+
+@function rem($values, $base-value: $rem-base) {
+  $max: length($values);
+  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); } 
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}
+
+@mixin bgr2x($path, $ext) {
+	$at1x_path: "#{$path}.#{$ext}";
+	$at2x_path: "#{$path}@x2.#{$ext}";
+    background-repeat: no-repeat; 
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url("#{$at1x_path}");
+  
+	@media all and (-webkit-min-device-pixel-ratio : 1.5),
+	all and (-o-min-device-pixel-ratio: 3/2),
+	all and (min--moz-device-pixel-ratio: 1.5),
+	all and (min-device-pixel-ratio: 1.5) {
+	  background-image: url("#{$at2x_path}"); 
+	}
+}

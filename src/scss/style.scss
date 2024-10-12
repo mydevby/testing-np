@@ -1,0 +1,25 @@
+@import "fonts";
+@import "var";
+@import "mixins";
+@import "reset";
+@import "elements";
+
+
+//plugins
+@import "plugins/owl.carousel.min";
+@import "owl-theme";
+
+//components
+@import "btns";
+@import "animations";
+@import "pre-header";
+@import "header";
+@import "navigation";
+@import "menu-categories";
+@import "menu-mob";
+@import "offer";
+@import "features";
+@import "catalog";
+@import "products";
+@import "subscription";
+@import "footer";

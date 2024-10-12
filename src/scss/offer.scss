@@ -1,0 +1,112 @@
+.offer {
+	padding-bottom: rem(70px);
+	@media (max-width: 992px) {
+		padding-bottom: rem(60px);
+	}
+    @media (max-width: 768px) {
+		padding-bottom: rem(50px);
+	}
+	@media (max-width: 480px) {
+		padding-bottom: rem(30px);
+	}
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		pointer-events: none;
+		z-index: -1;
+		background: $black;
+
+		@include bgr2x("@img/offer", "jpg");
+	
+		@media (max-width: 991px) {
+			@include bgr2x("@img/offer992", "jpg");
+		}
+	
+		@media (max-width: 768px) {
+			@include bgr2x("@img/offer768", "jpg");
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(36,36,36,1) rem(410px), rgba(36,36,36,0) 100%);
+			@media (max-width: 768px) {
+				background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(36,36,36,1) rem(250px), rgba(36,36,36,0) 100%);
+			}
+			@media (max-width: 480px) {
+				background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(36,36,36,1) rem(180px), rgba(36,36,36,0) 100%);
+			}
+		}
+	}
+
+	&__content {
+		max-width: rem(740px);
+		padding: rem(58px 95px 94px);
+		color: $white;
+		@media (max-width: 992px) {
+			max-width: rem(610px);
+			padding: rem(48px 75px);
+		}
+		@media (max-width: 768px) {
+			max-width: rem(530px);
+			padding: rem(48px 75px);
+		}
+		@media (max-width: 480px) {
+			max-width: rem(400px);
+			padding: rem(40px 30px);
+		}
+	}
+
+	&__title {
+		font-family: $font-b;
+		font-size: rem(44px);
+		margin-bottom: rem(18px);
+		@media (max-width: 992px) {
+			font-size: rem(36px);
+			margin-bottom: rem(15px);
+		}
+		@media (max-width: 768px) {
+			font-size: rem(32px);
+			margin-bottom: rem(12px);
+		}
+		@media (max-width: 480px) {
+			font-size: rem(30px);
+			margin-bottom: rem(10px);
+		}
+	}
+
+	&__text {
+		font-family: $font-l;
+		line-height: 1.6;
+		font-size: rem(18px);
+		margin-bottom: rem(30px);
+		@media (max-width: 992px) {
+			font-size: rem(17px);
+			margin-bottom: rem(25px);
+		}
+		@media (max-width: 768px) {
+			font-size: rem(16px);
+			margin-bottom: rem(22px);
+		}
+		@media (max-width: 480px) {
+			font-size: rem(15px);
+			margin-bottom: rem(20px);
+		}
+	}
+
+	&__btn {
+		margin-top: rem(30px);
+	}
+}

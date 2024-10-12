@@ -1,0 +1,130 @@
+.header {
+	background: $white;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		padding: rem(41px 15px 44px);
+		transition: padding .3s;
+		&--scroll {
+			padding: rem(15px);
+		}
+		@media (max-width: 992px) {
+			flex-wrap: wrap;
+			padding: rem(15px);
+		}
+	}
+
+	&__mob-menu-btns {
+		display: none;
+		@media (max-width: 992px) {
+			display: flex;
+			gap: 20px;
+			align-items: center;
+			margin-right: auto;
+		}
+	}
+
+	&__mob-menu-btn {
+		font-size: 0;
+		width: rem(32px);
+		height: rem(32px);
+		border: none;
+		background-color: transparent;
+		background-size: contain;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+
+		&--category {
+			background-image: url("@img/svg/icon__menu.svg");
+		}
+
+		&--menu{
+			background-image: url("@img/svg/icon__profile--black.svg");
+		}
+	}
+
+	&__logo {
+		margin-right: rem(104px);
+		@media (max-width: 992px) {
+			margin-right: rem(20px);
+			margin-left: rem(20px);
+		}
+	}
+
+	&__search {
+		margin-right: rem(78px);
+		@media (max-width: 992px) {
+			order: 1;
+			width: 100%;
+			margin-right: 0;
+			margin-top: rem(15px);
+		}
+	}
+
+	&__links {
+		display: flex;
+		gap: rem(20px);
+		font-size: 0;
+		margin-left: auto;
+		margin-right: rem(107px);
+		@media (max-width: 992px) {
+            margin-right: 0;
+			width: rem(32px);
+        }
+	}
+
+	&__link {
+		display: block;
+		width: rem(32px);
+		height: rem(32px);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: 50% 50%;
+		transition: .3s;
+
+		&:hover {
+			opacity: .7;
+		}
+
+		&--favourite {
+			background-image: url("@img/svg/icon__favourite.svg");
+		}
+
+		&--prices {
+			background-image: url("@img/svg/icon__prices.svg");
+			@media (max-width: 992px) {
+				display: none;
+			}
+		}
+	}
+
+	&__basket {
+		margin-left: auto;
+		@media (max-width: 992px) {
+            margin-left: rem(20px);
+        }
+	}
+
+	&__basket-link {
+		display: flex;
+		align-items: center;
+		height: rem(36px);
+		font-family: $font-b;
+		color: $black;
+		font-size: rem(22px);
+		padding-left: rem(54px);
+		background: url("@img/svg/icon__basket.svg") no-repeat 0% 50% /contain;
+		transition: .3s;
+		@media (max-width: 992px) {
+            font-size: 0;
+			height: rem(32px);
+			width: rem(32px);
+			padding-left: 0;
+        }
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+}

@@ -1,0 +1,111 @@
+.menu-mob {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: rem(320px);
+    padding: rem(60px 15px 30px);
+    bottom: 0;
+    background: $white;
+    z-index: 3;
+	transform: translateX(-100vw);
+	transition: .3s;
+	@media (min-width: 993px) {
+        display: none;
+    }
+
+	&.open {
+		transform: translateX(0);
+	}
+
+    &__close {
+		position: absolute;
+		top: rem(15px);
+		right: rem(15px);
+		width: rem(26px);
+		height: rem(26px);
+		border: none;
+		font-size: 0;
+		background: transparent url("@img/svg/icon__close--black.svg") no-repeat 50% 50% /contain;
+	}
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(30px);
+    }
+
+    &__link {
+        font-family: $font-b;
+        font-size: rem(22px);
+        color: $black;
+		padding-left: rem(35px);
+        transition: .3s;
+        position: relative;
+
+		&:hover {
+			opacity: .7;
+		}
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: rem(25px);
+            height: rem(25px);
+            background-position: 50% 50%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: translateY(-50%);
+        }
+
+		&--login {
+            &:before {
+                background-image: url("@img/svg/icon__login.svg");
+            }
+        }
+
+		&--registration {
+            &:before {
+                background-image: url("@img/svg/icon__profile--black.svg");
+            }
+        }
+
+		&--basket {
+            &:before {
+                background-image: url("@img/svg/icon__basket.svg");
+            }
+        }
+
+        &--favourite {
+            &:before {
+                background-image: url("@img/svg/icon__favourite.svg");
+            }
+        }
+
+		&--prices {
+            &:before {
+                background-image: url("@img/svg/icon__prices.svg");
+            }
+        }
+
+		&--about {
+            &:before {
+                background-image: url("@img/svg/icon__about.svg");
+            }
+        }
+
+		&--faq {
+            &:before {
+                background-image: url("@img/svg/icon__faq.svg");
+            }
+        }
+
+		&--news {
+            &:before {
+                background-image: url("@img/svg/icon__news.svg");
+            }
+        }
+    }
+}
