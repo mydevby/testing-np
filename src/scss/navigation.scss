@@ -18,9 +18,11 @@
         gap: rem(10px 95px);
         padding: rem(15px 0);
         transition: padding .3s;
+        min-height: rem(72px);
 
         &--scroll {
             padding: rem(10px 0);
+            min-height: rem(62px);
         }
     }
 
