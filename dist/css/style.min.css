@@ -1318,6 +1318,28 @@ header {
     padding: 1.875rem 0 0.9375rem;
   }
 }
+.catalog .owl-item:nth-child(even) .catalog__item {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-image: url("../img/catalog/catalog-1.jpg");
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  .catalog .owl-item:nth-child(even) .catalog__item {
+    background-image: url("../img/catalog/catalog-1@x2.jpg");
+  }
+}
+.catalog .owl-item:nth-child(odd) .catalog__item {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-image: url("../img/catalog/catalog-2.jpg");
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  .catalog .owl-item:nth-child(odd) .catalog__item {
+    background-image: url("../img/catalog/catalog-2@x2.jpg");
+  }
+}
 .catalog__item {
   height: 22.9375rem;
 }
@@ -1334,28 +1356,6 @@ header {
 @media (max-width: 480px) {
   .catalog__item {
     height: 17.5rem;
-  }
-}
-.catalog__item:nth-child(odd) {
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-image: url("../img/catalog/catalog-1.jpg");
-}
-@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
-  .catalog__item:nth-child(odd) {
-    background-image: url("../img/catalog/catalog-1@x2.jpg");
-  }
-}
-.catalog__item:nth-child(even) {
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-image: url("../img/catalog/catalog-2.jpg");
-}
-@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
-  .catalog__item:nth-child(even) {
-    background-image: url("../img/catalog/catalog-2@x2.jpg");
   }
 }
 .catalog__image {
